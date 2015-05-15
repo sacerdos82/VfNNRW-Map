@@ -1,0 +1,136 @@
+#vfnnrw-map {
+	background-color: #ccc;
+	position: relative;
+}
+
+.popover-content p {
+	font-size: 10px;
+	line-height: 14px;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+
+#geolocate,
+#toggleLayer,
+#social,
+#dimmer,
+#newNodes,
+#geocoords,
+#search {
+	position: absolute;
+	z-index: 899;
+	font-size: 16px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	padding-top: 5px;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+	border-radius: 3px;
+	color: #000;
+}
+
+#lostNodes {
+	position: absolute;
+	z-index: 899;
+	font-size: 16px;
+	padding: 3px 8px;
+	color: rgba(255, 255, 255, 0);
+}
+
+#geolocate {
+	bottom: 10px;
+	left: 10px;
+}
+
+#toggleLayer {
+	bottom: 10px;
+	left: 50px;
+}
+
+#social {
+	bottom: 10px;
+	left: 90px;
+}
+
+#dimmer {
+	bottom: 10px;
+	left: 130px;
+}
+
+#geocoords {
+	bottom: 50px;
+	left: 10px;
+}
+
+#newNodes {
+	bottom: 90px;
+	left: 10px;
+}
+
+#lostNodes {
+	bottom: 130px;
+	left: 10px;
+}
+
+#search {
+	bottom: 10px;
+	left: 170px;
+}
+
+#geolocate:hover,
+#toggleLayer:hover,
+#social:hover,
+#dimmer:hover,
+#newNodes:hover,
+#search:hover,
+#geocoords:hover {
+	background-color: rgba(220, 0, 104, 0.9);
+	cursor: pointer;
+}
+
+#lostNodes:hover {
+	display: block;
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.75);
+}
+
+#geocoords-container {
+	position: absolute;
+	bottom: 50px;
+	left: 10px;
+	z-index: 799;
+	width: 190px;
+	height: 30px;
+	border-radius: 3px;
+	background-color: #fff;
+	font-size: 8px;
+	line-height: 10px;
+	padding-left: 40px;
+	padding-top: 6px;
+}
+
+#geocoords-locked {
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	font-size: 18px;
+}
+
+
+/* Anpassungen Openlayers Grundelemente */
+
+.ol-zoom {
+	top: auto;
+	left: auto;
+	bottom: 45px;
+	right: 7px;
+}
+
+.ol-rotate {
+	top: auto;
+	left: auto;
+	bottom: 6px;
+	right: 45px;
+
+}
