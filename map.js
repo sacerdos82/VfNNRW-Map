@@ -738,6 +738,36 @@ $( document ).ready( function() {
  
 	});
 	
+	
+	// Zum Knoten zoomen
+	$( '#details-locate' ).click( function() {
+		
+		if( getURLParameter('n') != null ) { 
+			
+			var locateNodeID = parseInt( getURLParameter('n') );
+		
+			var queryNode = $.ajax({
+				
+				type: "GET",
+				url: 'http://nodeapi.vfn-nrw.de/index.php/get/node/' + locateNodeID,
+				dataType: "json",
+				xhrFields: {
+					withCredentials: false
+				}			
+			
+			}).done( function( data ) { 
+				
+				$( '#details' ).slideUp( '200' );
+				var nodePosition = new ol.proj.transform( [ parseFloat( data.Longitude ), parseFloat( data.Latitude ) ], 'EPSG:4326', 'EPSG:3857');
+				console.log( nodePosition );
+				map.getView().setCenter( nodePosition ); map.getView().setZoom(19);
+			
+			}).fail( function () { headerNotification( 'Konnte keine Verbindung zur API herstellen.' ); });
+			
+		}
+	
+	});
+	
 });
 
 
@@ -932,7 +962,7 @@ function showNodeDetails( nodeID ) {
 		
 		});
 	
-	}).fail( function () { });
+	}).fail( function () { headerNotification( 'Konnte keine Verbindung zur API aufbauen' ); });
 	
 }
 

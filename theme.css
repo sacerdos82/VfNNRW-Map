@@ -157,11 +157,20 @@ header button:hover {
 	right: 20px;
 }
 
+#details-locate {
+	font-size: 20px;
+	line-height: 20px;
+	position: absolute;
+	top: 20px;
+	right: 50px;
+}
+
 #details-close:hover,
 #sharing-close:hover,
-#address-close:hover {
+#address-close:hover,
+#details-locate:hover {
 	color: #009ee0;
-	cursor: pointer
+	cursor: pointer;
 }
 
 #details-tabs {
